@@ -1,1 +1,5 @@
-h1{color:red}
+@import url(../../node_modules/normalize.css/normalize.css);
+h1 {
+  color: red; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vbm9kZV9tb2R1bGVzL25vcm1hbGl6ZS5jc3Mvbm9ybWFsaXplLmNzc1wiO1xuXG5oMSB7XG4gIGNvbG9yOiByZWQ7XG59Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sQ0FBUCxtREFBTztBQUVQLEFBQUEsRUFBRSxDQUFDO0VBQ0QsS0FBSyxFQUFFLEdBQUcsR0FDWCJ9 */
