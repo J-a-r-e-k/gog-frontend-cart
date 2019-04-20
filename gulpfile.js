@@ -4,6 +4,7 @@ const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const cleanCSS = require("gulp-clean-css");
 const browserSync = require("browser-sync").create();
+const webp = require("gulp-webp");
 
 sass.compiler = require("node-sass");
 
@@ -11,6 +12,10 @@ const CONFIG = {
     "styles": {
         "src": "src/styles/**/*.scss",
         "dest": "dist/css"
+    },
+    "images": {
+        "src": "src/images/**/*",
+        "dest": "dist/images"
     },
     "watchDir": "src/**"
 };
@@ -42,8 +47,19 @@ function watch() {
     gulp.watch(`${CONFIG.watchDir}/*`).on("change", browserSync.reload);
 }
 
-const dev = stylesDev;
-const prod = gulp.series(clean, gulp.parallel(stylesProd));
+function imagesWebp() {
+    return gulp.src(`${CONFIG.images.src}.jpg`)
+        .pipe(webp())
+        .pipe(gulp.dest(CONFIG.images.dest));
+}
+
+function imagesCopy() {
+    return gulp.src(CONFIG.images.src)
+        .pipe(gulp.dest(CONFIG.images.dest));
+}
+
+const dev = gulp.series(clean, gulp.parallel(imagesCopy, imagesWebp, stylesDev));
+const prod = gulp.series(clean, gulp.parallel(imagesCopy, imagesWebp, stylesProd));
 
 exports.dev = dev;
 exports.prod = prod;
