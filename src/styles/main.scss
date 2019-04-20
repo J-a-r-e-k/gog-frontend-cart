@@ -1,5 +1,10 @@
 @import "../../node_modules/normalize.css/normalize.css";
 
-h1 {
-  color: red;
+@import "variables";
+@import "menu";
+
+body {
+  padding-top: 60px;
+  background-color: $colorSilverDark;
+  font-family: 'Source Sans Pro', sans-serif;
 }

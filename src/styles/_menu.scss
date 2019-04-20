@@ -1,0 +1,45 @@
+.menu {
+  position: fixed;
+  top: 0;
+  height: 56px;
+  width: 100%;
+  background-color: $colorSilver;
+
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+    width: $breakpointMedium;
+  }
+
+  &__logo {
+    float: left;
+    padding: 8px 5px;
+  }
+
+  &__cart {
+    float: right;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $colorSilverLight;
+    }
+
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media(min-width: $breakpointMedium) {
+    &__logo {
+      padding: 8px 0;
+    }
+  }
+}
