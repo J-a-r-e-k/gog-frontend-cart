@@ -7,6 +7,6 @@ angular
     .module("gogShop", [])
     .factory("storageFactory", [storageFactory])
     .factory("productFactory", [productFactory])
-    .controller("shopController", ["$scope", shopController]);
+    .controller("shopController", ["$scope", "storageFactory", "productFactory", shopController]);
 
 angular.bootstrap(document, ["gogShop"]);

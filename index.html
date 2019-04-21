@@ -20,9 +20,15 @@
                 <img src="/dist/images/logo.png" alt="GOG.com"/>
             </a>
             <a class="menu__cart" title="Cart">
-                <img src="/dist/images/cart-icon.png" alt="Cart icon"/> 0
+                <img src="/dist/images/cart-icon.png" alt="Cart icon"/>
+                <span>{{products.length}}</span>
             </a>
         </div>
+        <ul>
+            <li ng-repeat="product in products track by product.id">{{product.title}}
+                <button ng-click="removeProduct(product.id)">DELETE</button>
+            </li>
+        </ul>
     </nav>
 </header>
 
@@ -44,7 +50,7 @@
                 <img src="/dist/images/oddworld-strangers-wrath.jpg" alt="Oddworld: Stranger's Wrath">
             </picture>
             <p class="product__title">Oddworld: Stranger's Wrath</p>
-            <button class="product__badge">$9.99</button>
+            <button ng-click="addProduct(1)" ng-class="{'product__badge--active':isOnCart(1)}" class="product__badge"><span>$9.99</span></button>
             <span class="product__badge product__badge--success">-50%</span>
         </div>
         <div class="product">
@@ -54,7 +60,7 @@
                 <img src="/dist/images/chaos-on-deponia.jpg" alt="Chaos on Deponia">
             </picture>
             <p class="product__title">Chaos on Deponia</p>
-            <button class="product__badge">$9.99</button>
+            <button ng-click="addProduct(2)" ng-class="{'product__badge--active':isOnCart(2)}" class="product__badge"><span>$9.99</span></button>
             <span class="product__badge product__badge--success">-50%</span>
         </div>
         <div class="product">
@@ -64,7 +70,7 @@
                 <img src="/dist/images/the-settlers-2-gold-edition.jpg" alt="The Settlers 2: Gold Edition">
             </picture>
             <p class="product__title">The Settlers 2: Gold Edition</p>
-            <button class="product__badge">$9.99</button>
+            <button ng-click="addProduct(3)" ng-class="{'product__badge--active':isOnCart(3)}" class="product__badge"><span>$9.99</span></button>
             <span class="product__badge product__badge--success">-50%</span>
         </div>
         <div class="product">
@@ -74,7 +80,7 @@
                 <img src="/dist/images/neverwinter-nights.jpg" alt="Neverwinter Nights">
             </picture>
             <p class="product__title">Neverwinter Nights</p>
-            <button class="product__badge">$9.99</button>
+            <button ng-click="addProduct(4)" ng-class="{'product__badge--active':isOnCart(4)}" class="product__badge"><span>$9.99</span></button>
             <span class="product__badge product__badge--success">-50%</span>
         </div>
         <div class="product">
@@ -84,7 +90,7 @@
                 <img src="/dist/images/assassin-creed-directors-cut.jpg" alt="Assassin's Creed: Director's Cut">
             </picture>
             <p class="product__title">Assassin's Creed: Director's Cut</p>
-            <button class="product__badge">$9.99</button>
+            <button ng-click="addProduct(5)" ng-class="{'product__badge--active':isOnCart(5)}" class="product__badge"><span>$9.99</span></button>
             <span class="product__badge product__badge--success">-50%</span>
         </div>
     </div>

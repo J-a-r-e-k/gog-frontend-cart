@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "GOG.com frontend recruitment task",
   "scripts": {
-    "test": "NODE_ENV=test mocha 'src/**/*.spec.js'",
+    "test": "NODE_ENV=test mocha --require @babel/register --require mock-local-storage 'src/**/*.spec.js'",
     "dev": "gulp dev",
     "prod": "gulp prod",
     "watch": "gulp watch"
@@ -15,7 +15,13 @@
   "author": "23661244+J-a-r-e-k@users.noreply.github.com",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
     "browser-sync": "^2.26.3",
+    "chai": "^4.2.0",
     "del": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
@@ -23,7 +29,9 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-webp": "^4.0.1",
     "mocha": "^6.1.4",
+    "mock-local-storage": "^1.1.8",
     "node-sass": "^4.11.0",
+    "sinon": "^7.3.2",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^5.2.1"
   },

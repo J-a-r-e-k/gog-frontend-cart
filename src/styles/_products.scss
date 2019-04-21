@@ -41,12 +41,24 @@
     color: $colorDark;
     font-size: 13px;
     cursor: pointer;
+    text-transform: uppercase;
 
     &--success {
       border: 1px solid $colorSuccess;
       background-color: $colorSuccess;
       color: $colorLight;
       cursor: default;
+    }
+
+    &--active {
+      color: $colorSilverDark;
+      border: 1px solid $colorSilverDark;
+      span {
+        display: none;
+      }
+      &:after {
+        content: "In Cart"
+      }
     }
   }
 

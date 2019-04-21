@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "price": "$9.99",
+    "title": "ODDWORLD: STRANGER'S WRATH"
+  },
+  {
+    "id": 2,
+    "price": "$9.99",
+    "title": "CHAOS ON DEPONIA"
+  },
+  {
+    "id": 3,
+    "price": "$9.99",
+    "title": "THE SETTLERS 2: GOLD EDITION"
+  },
+  {
+    "id": 4,
+    "price": "$9.99",
+    "title": "NEVERWINTER NIGHTS"
+  },
+  {
+    "id": 5,
+    "price": "$9.99",
+    "title": "ASSASSIN'S CREED: DIRECTOR'S CUT"
+  }
+]
