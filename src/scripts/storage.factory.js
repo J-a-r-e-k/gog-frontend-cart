@@ -1,0 +1,5 @@
+const storageFactory = () => {
+
+};
+
+export {storageFactory}
