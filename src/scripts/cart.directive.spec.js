@@ -6,12 +6,12 @@ describe("Cart directive", () => {
 
     beforeEach(angular.mock.module(gogShop));
 
-    beforeEach(inject(function(_$compile_, _$rootScope_){
+    beforeEach(inject((_$compile_, _$rootScope_) => {
         $compile = _$compile_;
         $rootScope = _$rootScope_;
       }));
 
-      it('replaces element with the appropriate content', function() {
+      it('replaces element with the appropriate content', () => {
         $rootScope.products = [{
             "id": 1,
             "price": "1",

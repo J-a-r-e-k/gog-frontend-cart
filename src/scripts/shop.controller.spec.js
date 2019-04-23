@@ -6,7 +6,7 @@ describe("Shop Controller", () => {
 
     beforeEach(() => {
         angular.mock.module(gogShop);
-        angular.mock.inject(function (_$controller_, _$rootScope_) {
+        angular.mock.inject((_$controller_, _$rootScope_) => {
             $controller = _$controller_;
             $rootScope = _$rootScope_;
         });

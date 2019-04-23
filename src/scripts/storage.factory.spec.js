@@ -5,7 +5,7 @@ describe("Storage Factory", () => {
 
     beforeEach(() => {
         angular.mock.module(gogShop);
-        angular.mock.inject(function ($injector) {
+        angular.mock.inject(($injector) => {
             storageFactory = $injector.get("storageFactory");
         });
     });

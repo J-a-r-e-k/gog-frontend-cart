@@ -5,12 +5,12 @@ describe("Product Factory", () => {
 
     beforeEach(() => {
         angular.mock.module(gogShop);
-        angular.mock.inject(function ($injector) {
+        angular.mock.inject(($injector) => {
             productFactory = $injector.get("productFactory");
         });
     });
 
-    it("returns product object", function (done) {
+    it("returns product object", (done) => {
         expect(productFactory.get(1)).toEqual(jasmine.any(Object));
         done();
     });
