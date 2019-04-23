@@ -25,7 +25,6 @@
     "babel-loader": "^8.0.5",
     "babel-polyfill": "^6.26.0",
     "browser-sync": "^2.26.3",
-    "chai": "^4.2.0",
     "del": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
@@ -47,7 +46,6 @@
     "mock-local-storage": "^1.1.8",
     "node-sass": "^4.11.0",
     "promise-polyfill": "^8.1.0",
-    "sinon": "^7.3.2",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^5.2.1"
   },
