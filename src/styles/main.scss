@@ -1,12 +1,16 @@
 @import "../../node_modules/normalize.css/normalize.css";
-
 @import "variables";
 @import "menu";
 @import "offer";
 @import "products";
+@import "cart";
 
 body {
   padding-top: 60px;
   background-color: $colorSilverDark;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.clearfix {
+  clear: both;
 }

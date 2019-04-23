@@ -1,0 +1,14 @@
+<div class="cart-summary">
+    <span class="cart-summary__info">{{products.length}} ITEMS IN CART</span>
+    <span class="cart-summary__price">{{priceSum() | currency}}</span>
+    <button ng-click="clearCart()" class="cart-summary__btn">Clear cart</button>
+</div>
+<div class="cart-item" ng-repeat="product in products track by product.id">
+    <img class="cart-item__image" ng-src="{{product.image}}"/>
+    <div class="cart-item__content">
+        <p>{{product.title}}</p>
+        <a ng-click="removeProduct({id:product.id})">Remove</a>
+    </div>
+    <span class="cart-item__price">{{product.price | currency}}</span>
+    <div class="clearfix"></div>
+</div>

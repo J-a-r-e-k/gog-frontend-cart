@@ -23,6 +23,7 @@
 
   &__title {
     font-size: 14px;
+    font-weight: $fontSemiBold;
     text-transform: uppercase;
     line-height: 15px;
     height: 30px;
@@ -40,8 +41,10 @@
     margin: 8px 8px 8px 0;
     color: $colorDark;
     font-size: 13px;
+    font-weight: $fontSemiBold;
     cursor: pointer;
     text-transform: uppercase;
+    background-color: $colorSilver;
 
     &--success {
       border: 1px solid $colorSuccess;

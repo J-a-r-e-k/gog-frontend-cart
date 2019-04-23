@@ -51,7 +51,20 @@ function scriptsDev() {
         .pipe(named())
         .pipe(webpack({
             "mode": "development",
-            "devtool": "source-map"
+            "devtool": "source-map",
+            "module": {
+                "rules": [
+                    {
+                        test: /\.(html)$/,
+                        use: {
+                            loader: 'html-loader',
+                            options: {
+                            attrs: [':data-src']
+                            }
+                        }
+                    }
+                ]
+            }
         }).on("error", (err) => console.error(err)))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(CONFIG.scripts.dest));
@@ -61,7 +74,20 @@ function scriptsProd() {
     return gulp.src(CONFIG.scripts.src)
         .pipe(named())
         .pipe(webpack({
-            "mode": "production"
+            "mode": "production",
+            "module": {
+                "rules": [
+                    {
+                        test: /\.(html)$/,
+                        use: {
+                            loader: 'html-loader',
+                            options: {
+                            attrs: [':data-src']
+                            }
+                        }
+                    }
+                ]
+            }
         }).on("error", (err) => console.error(err)))
         .pipe(gulp.dest(CONFIG.scripts.dest));
 }
