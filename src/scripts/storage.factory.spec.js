@@ -1,7 +1,4 @@
 import gogShop from "./app";
-import {
-    expect
-} from "chai";
 
 describe("Storage Factory", () => {
     let storageFactory;
@@ -15,15 +12,15 @@ describe("Storage Factory", () => {
 
     it("returns array from local storage", (done) => {
         storageFactory.set("cart", undefined);
-        expect(storageFactory.get("cart")).to.be.a("array");
+        expect(storageFactory.get("cart")).toEqual(jasmine.any(Array));
         done();
     });
 
     it("returns updated array from local storage", (done) => {
         const newValue = [{}];
         storageFactory.set("cart", newValue);
-        expect(storageFactory.get("cart")).to.be.a("array");
-        expect(storageFactory.get("cart")).to.eql(newValue);
+        expect(storageFactory.get("cart")).toEqual(jasmine.any(Array));
+        expect(storageFactory.get("cart")).toEqual(newValue);
         done();
     });
 });

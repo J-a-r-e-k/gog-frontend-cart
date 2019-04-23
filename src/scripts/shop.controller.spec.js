@@ -1,7 +1,4 @@
 import gogShop from "./app";
-import {
-    expect
-} from "chai";
 
 describe("Shop Controller", () => {
     let $controller;
@@ -19,7 +16,7 @@ describe("Shop Controller", () => {
     it("has products array", (done) => {
         let $scope = $rootScope.$new();
         let controller = $controller("shopController", { $scope: $scope });
-        expect($scope.products).to.be.an("Array");
+        expect($scope.products).toEqual(jasmine.any(Object));
         done();
     });
 
@@ -27,7 +24,7 @@ describe("Shop Controller", () => {
         let $scope = $rootScope.$new();
         let controller = $controller("shopController", { $scope: $scope });
         $scope.addProduct(1);
-        expect($scope.isOnCart(1)).to.be.not.undefined;
+        expect($scope.isOnCart(1)).toBeDefined();
         done();
     });
 
@@ -36,7 +33,7 @@ describe("Shop Controller", () => {
         let controller = $controller("shopController", { $scope: $scope });
         $scope.addProduct(1);
         $scope.removeProduct(1);
-        expect($scope.isOnCart(1)).to.be.undefined;
+        expect($scope.isOnCart(1)).toBe(undefined);
         done();
     });
 
@@ -45,7 +42,7 @@ describe("Shop Controller", () => {
         let controller = $controller("shopController", { $scope: $scope });
         $scope.addProduct(1);
         $scope.clearCart();
-        expect($scope.isOnCart(1)).to.be.undefined;
+        expect($scope.isOnCart(1)).toBe(undefined);
         done();
     });
 });

@@ -1,7 +1,4 @@
 import gogShop from "./app";
-import {
-    expect
-} from "chai";
 
 describe("Product Factory", () => {
     let productFactory;
@@ -14,7 +11,7 @@ describe("Product Factory", () => {
     });
 
     it("returns product object", function (done) {
-        expect(productFactory.get(1)).to.be.a("Object");
+        expect(productFactory.get(1)).toEqual(jasmine.any(Object));
         done();
     });
 });
