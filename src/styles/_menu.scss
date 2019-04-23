@@ -29,7 +29,10 @@
 
     &:hover {
       cursor: pointer;
+      width: 54px;
       background-color: $colorSilverLight;
+      border-left: 1px solid $colorSilverDark;
+      border-right: 1px solid $colorSilverDark;
     }
 
     span {
