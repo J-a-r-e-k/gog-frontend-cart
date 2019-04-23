@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Download the best classic and new games...">
     <meta name="keywords" content="">
-    <link rel="shortcut icon" type="image/png" href="/dist/images/logo.png"/>
-    <link href="/dist/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="dist/images/logo.png"/>
+    <link href="dist/css/main.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&amp;subset=latin-ext"
           rel="stylesheet">
 </head>
@@ -17,10 +17,10 @@
     <nav class="menu">
         <div class="menu__container">
             <a class="menu__logo" href="/" title="GOG.com">
-                <img src="/dist/images/logo.png" alt="GOG.com"/>
+                <img src="dist/images/logo.png" alt="GOG.com"/>
             </a>
             <a ng-click="showCart = !showCart" class="menu__cart" title="Cart">
-                <img src="/dist/images/cart-icon.png" alt="Cart icon"/>
+                <img src="dist/images/cart-icon.png" alt="Cart icon"/>
                 <span class="ng-cloak">{{products.length}}</span>
             </a>
             <div class="clearfix"></div>
@@ -37,9 +37,9 @@
 <section class="offer">
     <h1 class="offer__title">Game of the week</h1>
     <picture class="offer__image">
-        <source srcset="/dist/images/the-witcher-adventure-game.webp" type="image/webp">
-        <source srcset="/dist/images/the-witcher-adventure-game.jpg" type="image/jpeg">
-        <img src="/dist/images/the-witcher-adventure-game.jpg" alt="Game of the week">
+        <source srcset="dist/images/the-witcher-adventure-game.webp" type="image/webp">
+        <source srcset="dist/images/the-witcher-adventure-game.jpg" type="image/jpeg">
+        <img src="dist/images/the-witcher-adventure-game.jpg" alt="Game of the week">
     </picture>
 </section>
 
@@ -47,9 +47,9 @@
     <div class="products__container">
         <div class="product">
             <picture class="product__image">
-                <source srcset="/dist/images/oddworld-strangers-wrath.webp" type="image/webp">
-                <source srcset="/dist/images/oddworld-strangers-wrath.jpg" type="image/jpeg">
-                <img src="/dist/images/oddworld-strangers-wrath.jpg" alt="Oddworld: Stranger's Wrath">
+                <source srcset="dist/images/oddworld-strangers-wrath.webp" type="image/webp">
+                <source srcset="dist/images/oddworld-strangers-wrath.jpg" type="image/jpeg">
+                <img src="dist/images/oddworld-strangers-wrath.jpg" alt="Oddworld: Stranger's Wrath">
             </picture>
             <p class="product__title">Oddworld: Stranger's Wrath</p>
             <button ng-click="addProduct(1)" ng-disabled="isOnCart(1)" ng-class="{'product__badge--active':isOnCart(1)}" class="product__badge"><span>$9.99</span></button>
@@ -57,9 +57,9 @@
         </div>
         <div class="product">
             <picture class="product__image">
-                <source srcset="/dist/images/chaos-on-deponia.webp" type="image/webp">
-                <source srcset="/dist/images/chaos-on-deponia.jpg" type="image/jpeg">
-                <img src="/dist/images/chaos-on-deponia.jpg" alt="Chaos on Deponia">
+                <source srcset="dist/images/chaos-on-deponia.webp" type="image/webp">
+                <source srcset="dist/images/chaos-on-deponia.jpg" type="image/jpeg">
+                <img src="dist/images/chaos-on-deponia.jpg" alt="Chaos on Deponia">
             </picture>
             <p class="product__title">Chaos on Deponia</p>
             <button ng-click="addProduct(2)" ng-disabled="isOnCart(2)" ng-class="{'product__badge--active':isOnCart(2)}" class="product__badge"><span>$9.99</span></button>
@@ -67,9 +67,9 @@
         </div>
         <div class="product">
             <picture class="product__image">
-                <source srcset="/dist/images/the-settlers-2-gold-edition.webp" type="image/webp">
-                <source srcset="/dist/images/the-settlers-2-gold-edition.jpg" type="image/jpeg">
-                <img src="/dist/images/the-settlers-2-gold-edition.jpg" alt="The Settlers 2: Gold Edition">
+                <source srcset="dist/images/the-settlers-2-gold-edition.webp" type="image/webp">
+                <source srcset="dist/images/the-settlers-2-gold-edition.jpg" type="image/jpeg">
+                <img src="dist/images/the-settlers-2-gold-edition.jpg" alt="The Settlers 2: Gold Edition">
             </picture>
             <p class="product__title">The Settlers 2: Gold Edition</p>
             <button ng-click="addProduct(3)" ng-disabled="isOnCart(3)" ng-class="{'product__badge--active':isOnCart(3)}" class="product__badge"><span>$9.99</span></button>
@@ -77,9 +77,9 @@
         </div>
         <div class="product">
             <picture class="product__image">
-                <source srcset="/dist/images/neverwinter-nights.webp" type="image/webp">
-                <source srcset="/dist/images/neverwinter-nights.jpg" type="image/jpeg">
-                <img src="/dist/images/neverwinter-nights.jpg" alt="Neverwinter Nights">
+                <source srcset="dist/images/neverwinter-nights.webp" type="image/webp">
+                <source srcset="dist/images/neverwinter-nights.jpg" type="image/jpeg">
+                <img src="dist/images/neverwinter-nights.jpg" alt="Neverwinter Nights">
             </picture>
             <p class="product__title">Neverwinter Nights</p>
             <button ng-click="addProduct(4)" ng-disabled="isOnCart(4)" ng-class="{'product__badge--active':isOnCart(4)}" class="product__badge"><span>$9.99</span></button>
@@ -87,9 +87,9 @@
         </div>
         <div class="product">
             <picture class="product__image">
-                <source srcset="/dist/images/assassin-creed-directors-cut.webp" type="image/webp">
-                <source srcset="/dist/images/assassin-creed-directors-cut.jpg" type="image/jpeg">
-                <img src="/dist/images/assassin-creed-directors-cut.jpg" alt="Assassin's Creed: Director's Cut">
+                <source srcset="dist/images/assassin-creed-directors-cut.webp" type="image/webp">
+                <source srcset="dist/images/assassin-creed-directors-cut.jpg" type="image/jpeg">
+                <img src="dist/images/assassin-creed-directors-cut.jpg" alt="Assassin's Creed: Director's Cut">
             </picture>
             <p class="product__title">Assassin's Creed: Director's Cut</p>
             <button ng-click="addProduct(5)" ng-disabled="isOnCart(5)" ng-class="{'product__badge--active':isOnCart(5)}" class="product__badge"><span>$9.99</span></button>
@@ -98,6 +98,6 @@
     </div>
 </div>
 
-<script async src="/dist/js/app.js"></script>
+<script async src="dist/js/app.js"></script>
 </body>
 </html>
