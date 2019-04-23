@@ -5,11 +5,9 @@ const shopController = ($scope, storageFactory, productFactory) => {
         if ($scope.isOnCart(id)) {
             return false;
         }
-        return productFactory.get(id).then(product => {
-            $scope.products.push(product);
-            $scope.$apply();
-            return storageFactory.set("cart", $scope.products);
-        })
+        const product = productFactory.get(id);
+        $scope.products.push(product);
+        return storageFactory.set("cart", $scope.products);
     };
 
     $scope.removeProduct = (id) => {

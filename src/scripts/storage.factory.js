@@ -1,13 +1,13 @@
 const storageFactory = () => {
     return {
         "get": (key) => {
+            let output = [];
             try {
-                return JSON.parse(localStorage.getItem(key) || "[]");
+                output = JSON.parse(localStorage.getItem(key) || "[]");
             } catch (e) {
-                console.error(e);
                 localStorage.setItem(key, "[]");
-                return [];
             }
+            return JSON.parse(localStorage.getItem(key) || "[]");
         },
         "set": (key, value) => {
             return localStorage.setItem(key, JSON.stringify(value));

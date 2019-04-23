@@ -3,10 +3,10 @@ import {storageFactory} from "./storage.factory";
 import {productFactory} from "./product.factory";
 import {shopController} from "./shop.controller";
 
-angular
+const app = angular
     .module("gogShop", [])
     .factory("storageFactory", [storageFactory])
     .factory("productFactory", [productFactory])
     .controller("shopController", ["$scope", "storageFactory", "productFactory", shopController]);
 
-angular.bootstrap(document, ["gogShop"]);
+export default app.name;

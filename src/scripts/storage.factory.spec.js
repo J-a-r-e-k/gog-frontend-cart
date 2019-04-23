@@ -1,20 +1,29 @@
-import {expect} from "chai";
-import {storageFactory} from "./storage.factory";
+import gogShop from "./app";
+import {
+    expect
+} from "chai";
 
-describe("storageFactory", () => {
-    const sf = storageFactory();
+describe("Storage Factory", () => {
+    let storageFactory;
 
-    it("should return empty array", (done) => {
-        expect(sf.get("cart")).to.be.a("array");
-        expect(sf.get("cart")).to.be.empty;
+    beforeEach(() => {
+        angular.mock.module(gogShop);
+        angular.mock.inject(function ($injector) {
+            storageFactory = $injector.get("storageFactory");
+        });
+    });
+
+    it("returns array from local storage", (done) => {
+        storageFactory.set("cart", undefined);
+        expect(storageFactory.get("cart")).to.be.a("array");
         done();
     });
 
-    it("should return updated array", (done) => {
+    it("returns updated array from local storage", (done) => {
         const newValue = [{}];
-        sf.set("cart", newValue);
-        expect(sf.get("cart")).to.be.a("array");
-        expect(sf.get("cart")).to.eql(newValue);
+        storageFactory.set("cart", newValue);
+        expect(storageFactory.get("cart")).to.be.a("array");
+        expect(storageFactory.get("cart")).to.eql(newValue);
         done();
     });
 });

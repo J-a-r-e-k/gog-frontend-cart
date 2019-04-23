@@ -1,13 +1,20 @@
-import {expect} from "chai";
-import {productFactory} from "./product.factory";
+import gogShop from "./app";
+import {
+    expect
+} from "chai";
 
-describe("productFactory", () => {
-    const pf = productFactory();
+describe("Product Factory", () => {
+    let productFactory;
 
-    it("should return product with id", (done) => {
-        pf.get(1).then(product => {
-            expect(product.id).to.hasOwnProperty("id");
-            done();
+    beforeEach(() => {
+        angular.mock.module(gogShop);
+        angular.mock.inject(function ($injector) {
+            productFactory = $injector.get("productFactory");
         });
+    });
+
+    it("returns product object", function (done) {
+        expect(productFactory.get(1)).to.be.a("Object");
+        done();
     });
 });

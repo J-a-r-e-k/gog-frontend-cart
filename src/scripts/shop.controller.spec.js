@@ -1,36 +1,51 @@
-import {expect} from "chai";
-import {shopController} from "./shop.controller";
-import {storageFactory} from "./storage.factory";
-import {productFactory} from "./product.factory";
+import gogShop from "./app";
+import {
+    expect
+} from "chai";
 
-describe("shopController", () => {
+describe("Shop Controller", () => {
+    let $controller;
+    let $rootScope;
 
-    let $scope = {};
-    shopController($scope, storageFactory(), productFactory());
+    beforeEach(() => {
+        angular.mock.module(gogShop);
+        angular.mock.inject(function (_$controller_, _$rootScope_) {
+            $controller = _$controller_;
+            $rootScope = _$rootScope_;
+        });
+        localStorage.setItem("cart", "[]");
+    });
 
-    it("should has empty products array", (done) => {
-        expect($scope.products).to.be.a("array");
-        expect($scope.products).to.be.empty;
+    it("has products array", (done) => {
+        let $scope = $rootScope.$new();
+        let controller = $controller("shopController", { $scope: $scope });
+        expect($scope.products).to.be.an("Array");
         done();
     });
 
-    it("should has addProduct function", (done) => {
-        expect($scope.addProduct).to.be.a("function");
+    it("adds product to cart", (done) => {
+        let $scope = $rootScope.$new();
+        let controller = $controller("shopController", { $scope: $scope });
+        $scope.addProduct(1);
+        expect($scope.isOnCart(1)).to.be.not.undefined;
         done();
     });
 
-    it("should has removeProduct function", (done) => {
-        expect($scope.removeProduct).to.be.a("function");
+    it("removes product from cart", (done) => {
+        let $scope = $rootScope.$new();
+        let controller = $controller("shopController", { $scope: $scope });
+        $scope.addProduct(1);
+        $scope.removeProduct(1);
+        expect($scope.isOnCart(1)).to.be.undefined;
         done();
     });
 
-    it("should has isOnCart function", (done) => {
-        expect($scope.isOnCart).to.be.a("function");
-        done();
-    });
-
-    it("should has clearCart function", (done) => {
-        expect($scope.clearCart).to.be.a("function");
+    it("removes all products from cart", (done) => {
+        let $scope = $rootScope.$new();
+        let controller = $controller("shopController", { $scope: $scope });
+        $scope.addProduct(1);
+        $scope.clearCart();
+        expect($scope.isOnCart(1)).to.be.undefined;
         done();
     });
 });
