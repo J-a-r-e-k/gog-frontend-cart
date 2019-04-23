@@ -1,6 +1,6 @@
 import gogShop from "./app";
 
-describe("Product Factory", () => {
+describe("Cart directive", () => {
     let $compile;
     let $rootScope;
 
