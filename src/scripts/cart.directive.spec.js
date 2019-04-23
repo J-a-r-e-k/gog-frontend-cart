@@ -22,9 +22,9 @@ describe("Cart directive", () => {
             "price": "2",
             "title": "Game"
         }];
-        let element = $compile("<div cart products='products'><div>")($rootScope);
+        let element = $compile(`<div cart products="products"><div>`)($rootScope);
         $rootScope.$digest();
         expect(element.html()).toContain(`<p class="ng-binding">Game</p>`);
-        expect(element.html()).toContain(`<span class="cart-summary__price ng-binding">$3.00</span>`);
+        expect(element.html()).toContain(`<div class="cart-summary__price ng-binding">$3.00</div>`);
       });
 });

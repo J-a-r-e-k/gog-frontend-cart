@@ -16,7 +16,7 @@ describe("Shop Controller", () => {
     it("has products array", (done) => {
         let $scope = $rootScope.$new();
         let controller = $controller("shopController", { $scope: $scope });
-        expect($scope.products).toEqual(jasmine.any(Object));
+        expect($scope.products).toEqual(jasmine.any(Array));
         done();
     });
 
