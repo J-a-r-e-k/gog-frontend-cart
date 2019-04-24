@@ -7,7 +7,7 @@ const storageFactory = () => {
             } catch (e) {
                 localStorage.setItem(key, "[]");
             }
-            return JSON.parse(localStorage.getItem(key) || "[]");
+            return output;
         },
         "set": (key, value) => {
             return localStorage.setItem(key, JSON.stringify(value));
