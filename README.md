@@ -11,3 +11,7 @@ This project is a simple shopping cart management application.
 ## Running test
 
 Start Karma with `npm run test`
+
+## Demo
+
+[https://j-a-r-e-k.github.io/gog-frontend-cart/](https://j-a-r-e-k.github.io/gog-frontend-cart/)
