@@ -2,6 +2,7 @@
     float: right;
     max-width: 100%;
     width: 100%;
+    border-right: 1px solid $colorSilverDark;
   
     @media(min-width: $breakpointSmall) {
       width: 370px;
@@ -41,7 +42,7 @@
       background: linear-gradient(to bottom, $colorViolet, $colorBlueViolet);
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0);
       font-size: 14px;
-      font-weight: $fontRegular;
+      font-weight: $fontSemiBold;
     }
 
     @media(min-width: $breakpointSmall) {
